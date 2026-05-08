@@ -1,0 +1,6 @@
+com\surgery\servlet\PatientReportServlet.class
+com\surgery\servlet\SurgeonServlet.class
+com\surgery\servlet\OTServlet.class
+com\surgery\servlet\SurgeonAvailabilityServlet.class
+com\surgery\servlet\ConflictCheckServlet.class
+com\surgery\servlet\SurgeryServlet.class

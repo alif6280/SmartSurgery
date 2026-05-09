@@ -27,9 +27,9 @@
         .area{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0}
 
         /* Topbar */
-        .topbar{background:#fff;border-bottom:1px solid #e2e8e2;padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-        .topbar-title{font-size:16px;font-weight:700;color:#0a2318}
-        .topbar-sub{font-size:12px;color:#64748b;margin-top:2px}
+        .topbar{background:#E1F5EE;border-bottom:2px solid #1D9E75;padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+        .topbar-title{font-size:16px;font-weight:700;color:#085041}
+        .topbar-sub{font-size:12px;color:#0F6E56;margin-top:2px}
         .topbar-right{display:flex;align-items:center;gap:10px}
 
         /* Page body */

@@ -15,15 +15,17 @@
     <title>Patients — Smart Surgery System</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        html, body { margin: 0; padding: 0; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        .shell { overflow-x: hidden; }
         html, body { height: 100%; overflow: hidden; font-family: 'Space Grotesk', sans-serif; background: #f5f7f5; }
-        .shell { display: flex; height: 100vh; overflow: hidden; }
-        .area { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
-        .topbar { background: #fff; border-bottom: 1px solid #e2e8e2; padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
-        .topbar-title { font-size: 16px; font-weight: 700; color: #0a2318; }
-        .topbar-sub { font-size: 12px; color: #64748b; margin-top: 2px; }
+        .shell { display: flex; height: 100vh; overflow: hidden; gap: 0; }
+        .area { flex: 1; overflow-y: auto; min-width: 0; }
+        .topbar { background: #0a3d2e; border-left: none; margin-left: 0; border-bottom: none; padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
+        .topbar-title { font-size: 16px; font-weight: 700; color: #fff; }
+        .topbar-sub { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 2px; }
         .topbar-right { display: flex; align-items: center; gap: 10px; }
-        .scroll-area { flex: 1; overflow-y: auto; overflow-x: hidden; }
+        .scroll-area { overflow-x: hidden; }
         .scroll-area::-webkit-scrollbar { width: 4px; }
         .scroll-area::-webkit-scrollbar-thumb { background: #c8d8c8; border-radius: 4px; }
 
@@ -120,8 +122,11 @@
         .pc-actions { display: flex; gap: 5px; }
         .pc-actions a, .pc-actions button { width: 30px; height: 30px; border-radius: 8px; border: 1px solid #c8d8e8; background: #f0f4f8; display: flex; align-items: center; justify-content: center; font-size: 13px; text-decoration: none; cursor: pointer; transition: background 0.15s, transform 0.15s; color: inherit; font-family: 'Space Grotesk', sans-serif; }
         .pc-actions a:hover, .pc-actions button:hover { background: #e2eaf2; transform: scale(1.1); }
-        .btn-schedule { display: inline-flex; align-items: center; gap: 4px; padding: 0 10px; height: 30px; border-radius: 8px; background: linear-gradient(135deg, #007a63, #005f4d); color: #fff; font-size: 10px; font-weight: 700; border: none; cursor: pointer; text-decoration: none; font-family: 'Space Grotesk', sans-serif; box-shadow: 0 2px 8px rgba(0,122,99,0.30); transition: box-shadow 0.15s, transform 0.15s; white-space: nowrap; } text-decoration: none; font-family: 'Space Grotesk', sans-serif; box-shadow: 0 2px 8px rgba(0,122,99,0.30); transition: box-shadow 0.15s, transform 0.15s; white-space: nowrap; }
+
+        /* ── FIX: was broken with duplicate properties outside braces ── */
+        .btn-schedule { display: inline-flex; align-items: center; gap: 4px; padding: 0 10px; height: 30px; border-radius: 8px; background: linear-gradient(135deg, #007a63, #005f4d); color: #fff; font-size: 10px; font-weight: 700; border: none; cursor: pointer; text-decoration: none; font-family: 'Space Grotesk', sans-serif; box-shadow: 0 2px 8px rgba(0,122,99,0.30); transition: box-shadow 0.15s, transform 0.15s; white-space: nowrap; }
         .btn-schedule:hover { box-shadow: 0 4px 16px rgba(0,122,99,0.40); transform: scale(1.03); }
+
         .risk-bar-bg2  { height: 4px; border-radius: 2px; background: #c8d8e8; width: 70px; }
         .risk-bar-fill2{ height: 4px; border-radius: 2px; background: var(--fill-color, #007a63); }
         .no-results { padding: 48px 24px; text-align: center; color: #5a7a90; }
@@ -395,8 +400,8 @@
                                 <div class="pc-actions">
                                     <a href="${pageContext.request.contextPath}/patients?action=view&id=${p.id}" title="View">👁️</a>
                                     <a href="${pageContext.request.contextPath}/patients?action=edit&id=${p.id}" title="Edit">✏️</a>
-                                    <button title="Print" onclick="printPatient(this)">🖨️</button>
-                                    <a href="${pageContext.request.contextPath}/patients?action=delete&id=${p.id}" title="Delete" onclick="return confirm('Delete patient ${p.fullName}?')">🗑️</a>
+                                    <button title="Print" onclick="event.stopPropagation();printPatient(this)">🖨️</button>
+                                    <a href="${pageContext.request.contextPath}/patients?action=delete&id=${p.id}" title="Delete" onclick="event.stopPropagation();return confirm('Delete patient ${p.fullName}?')">🗑️</a>
                                 </div>
                             </div>
                             <c:if test="${not empty p.lastUpdated}">

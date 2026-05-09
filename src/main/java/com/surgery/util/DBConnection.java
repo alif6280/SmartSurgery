@@ -4,20 +4,18 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- * Database Connection Utility
- * Manages MySQL connection for the Surgery System
- */
 public class DBConnection {
 
-    // ⚠️ Change these values to match your MySQL setup
-    private static final String URL  = "jdbc:mysql://localhost:3306/surgery_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
-    private static final String USER = "root";       // Your MySQL username
-    private static final String PASS = "admin1234";       // Your MySQL password
+    private static final String URL = "jdbc:mysql://"
+            + System.getenv("DB_HOST") + ":"
+            + System.getenv("DB_PORT") + "/"
+            + System.getenv("DB_NAME")
+            + "?useSSL=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+    private static final String USER = System.getenv("DB_USER");
+    private static final String PASS = System.getenv("DB_PASSWORD");
 
     private static Connection connection = null;
 
-    // Load MySQL driver once when class loads
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -27,9 +25,6 @@ public class DBConnection {
         }
     }
 
-    /**
-     * Get database connection (creates one if not exists)
-     */
     public static Connection getConnection() throws SQLException {
         if (connection == null || connection.isClosed()) {
             try {
@@ -43,9 +38,6 @@ public class DBConnection {
         return connection;
     }
 
-    /**
-     * Close the database connection
-     */
     public static void closeConnection() {
         if (connection != null) {
             try {

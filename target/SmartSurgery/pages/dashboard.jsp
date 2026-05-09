@@ -78,8 +78,8 @@ html,body{height:100%;overflow:hidden;font-family:'Space Grotesk',sans-serif;bac
 .area{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0}
 
 /* ══ TOPBAR ══ */
-.topbar{background:#fff;border-bottom:1px solid #e2e8e2;padding:0 20px;height:56px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.tb-greet{font-size:18px;font-weight:800;color:#0a2318;letter-spacing:-0.5px}
+.topbar{background:#0a3d2e;border-bottom:none;padding:0 20px;height:56px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.tb-greet{font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.5px}
 .tb-right{display:flex;align-items:center;gap:8px}
 .srch-wrap{position:relative}
 .srch-box{display:flex;align-items:center;gap:7px;background:#f4f7f4;border:1px solid #dde8dd;border-radius:9px;padding:7px 12px;cursor:text;width:160px}
@@ -95,15 +95,15 @@ html,body{height:100%;overflow:hidden;font-family:'Space Grotesk',sans-serif;bac
 .srch-rn{font-size:12px;font-weight:600;color:#0a2318}
 .srch-rs{font-size:10px;color:#94a3b8;margin-top:1px}
 .srch-empty{padding:14px;text-align:center;color:#94a3b8;font-size:12px}
-.tb-icon{width:34px;height:34px;background:#f4f7f4;border:1px solid #dde8dd;border-radius:9px;display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;flex-shrink:0}
-.tb-icon svg{width:14px;height:14px;stroke:#64748b;fill:none;stroke-width:2}
+.tb-icon{width:34px;height:34px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:9px;display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;flex-shrink:0}
+.tb-icon svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:2}
 .tb-ndot{position:absolute;top:-2px;right:-2px;width:7px;height:7px;background:#ef4444;border-radius:50%;border:1.5px solid #fff}
-.tb-lbl{display:flex;align-items:center;gap:6px;padding:7px 13px;border-radius:9px;background:#f4f7f4;border:1px solid #dde8dd;font-size:11.5px;color:#334155;white-space:nowrap;cursor:pointer}
-.tb-lbl svg{width:13px;height:13px;stroke:#64748b;fill:none;stroke-width:2}
+.tb-lbl{display:flex;align-items:center;gap:6px;padding:7px 13px;border-radius:9px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);font-size:11.5px;color:#fff;white-space:nowrap;cursor:pointer}
+.tb-lbl svg{width:13px;height:13px;stroke:#fff;fill:none;stroke-width:2}
 .btn-export{display:flex;align-items:center;gap:6px;padding:8px 16px;border-radius:9px;background:linear-gradient(135deg,#059669,#34d399);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:12.5px;font-weight:700;border:none;cursor:pointer;box-shadow:0 3px 10px rgba(5,150,105,0.28);transition:all 0.18s;white-space:nowrap;text-decoration:none}
 .btn-export:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(5,150,105,0.36)}
 .btn-export svg{width:13px;height:13px;stroke:#fff;fill:none;stroke-width:2.5}
-.tb-av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#059669,#34d399);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;cursor:pointer;flex-shrink:0}
+.tb-av{width:34px;height:34px;border-radius:50%;background:#34d399;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#0a3d2e;cursor:pointer;flex-shrink:0}
 
 /* ══ BODY ══ */
 .body{flex:1;display:flex;overflow:hidden;min-width:0}
@@ -494,16 +494,6 @@ html,body{height:100%;overflow:hidden;font-family:'Space Grotesk',sans-serif;bac
       <a href="${pageContext.request.contextPath}/ot" class="sb-item">
         <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
         <span class="sb-txt">Operation Theaters</span><span class="sb-tip">OT Rooms</span>
-      </a>
-      <div class="sb-div"></div>
-      <div class="sb-sec">Tools</div>
-      <a href="${pageContext.request.contextPath}/patients" class="sb-item">
-        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        <span class="sb-txt">Risk Analysis</span><span class="sb-tip">Risk Analysis</span>
-      </a>
-      <a href="#" class="sb-item">
-        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
-        <span class="sb-txt">Reports</span><span class="sb-tip">Reports</span>
       </a>
       <div class="sb-div"></div>
       <div class="sb-sec">Account</div>

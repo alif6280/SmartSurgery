@@ -4,19 +4,20 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * Database Connection Utility
+ * Manages MySQL connection for the Surgery System
+ */
 public class DBConnection {
 
-    private static final String host = System.getenv("DB_HOST") != null ? System.getenv("DB_HOST") : "localhost";
-    private static final String port = System.getenv("DB_PORT") != null ? System.getenv("DB_PORT") : "3306";
-    private static final String db = System.getenv("DB_NAME") != null ? System.getenv("DB_NAME") : "surgery_db";
-    private static final String USER = System.getenv("DB_USER") != null ? System.getenv("DB_USER") : "root";
-    private static final String PASS = System.getenv("DB_PASSWORD") != null ? System.getenv("DB_PASSWORD") : "admin1234";
-
-    private static final String URL = "jdbc:mysql://" + host + ":" + port + "/" + db
-            + "?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+    // ⚠️ Change these values to match your MySQL setup
+    private static final String URL  = "jdbc:mysql://localhost:3306/surgery_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+    private static final String USER = "root";       // Your MySQL username
+    private static final String PASS = "admin1234";       // Your MySQL password
 
     private static Connection connection = null;
 
+    // Load MySQL driver once when class loads
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -26,6 +27,9 @@ public class DBConnection {
         }
     }
 
+    /**
+     * Get database connection (creates one if not exists)
+     */
     public static Connection getConnection() throws SQLException {
         if (connection == null || connection.isClosed()) {
             try {
@@ -39,6 +43,9 @@ public class DBConnection {
         return connection;
     }
 
+    /**
+     * Close the database connection
+     */
     public static void closeConnection() {
         if (connection != null) {
             try {

@@ -1,6 +1,11 @@
+com\surgery\dao\SettingsDAO.class
+com\surgery\servlet\OTServlet.class
+com\surgery\model\Settings.class
+com\surgery\servlet\SettingsServlet.class
+com\surgery\servlet\ConflictCheckServlet.class
+com\surgery\servlet\AboutServlet.class
 com\surgery\servlet\PatientReportServlet.class
 com\surgery\servlet\SurgeonServlet.class
-com\surgery\servlet\OTServlet.class
+com\surgery\dao\UserDAO.class
 com\surgery\servlet\SurgeonAvailabilityServlet.class
-com\surgery\servlet\ConflictCheckServlet.class
 com\surgery\servlet\SurgeryServlet.class

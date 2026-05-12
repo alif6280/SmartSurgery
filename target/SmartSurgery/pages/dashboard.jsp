@@ -450,6 +450,7 @@ html,body{height:100%;overflow:hidden;font-family:'Space Grotesk',sans-serif;bac
 .risk-high{background:#fff5f5;color:#dc2626}
 .risk-critical{background:#fef2f2;color:#b91c1c}
 </style>
+<script src="${pageContext.request.contextPath}/js/site-prefs.js"></script>
 </head>
 <body>
 <div class="shell">
@@ -497,10 +498,15 @@ html,body{height:100%;overflow:hidden;font-family:'Space Grotesk',sans-serif;bac
       </a>
       <div class="sb-div"></div>
       <div class="sb-sec">Account</div>
-      <a href="#" class="sb-item">
+      <a href="${pageContext.request.contextPath}/settings" class="sb-item">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
         <span class="sb-txt">Settings</span><span class="sb-tip">Settings</span>
       </a>
+      <a href="${pageContext.request.contextPath}/about" class="sb-item">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span class="sb-txt">About</span>
+              <span class="sb-tip">About</span>
+            </a>
       <a href="${pageContext.request.contextPath}/logout" class="sb-item">
         <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16,17 21,12 16,7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
         <span class="sb-txt">Logout</span><span class="sb-tip">Logout</span>
@@ -685,42 +691,42 @@ html,body{height:100%;overflow:hidden;font-family:'Space Grotesk',sans-serif;bac
           <!-- RIGHT col -->
           <div style="display:flex;flex-direction:column;gap:13px">
 
-            <!-- ══ QUICK ACTIONS — GLASSMORPHISM DARK ══ -->
+            <!-- ══ QUICK ACTIONS ══ -->
             <div class="panel">
               <div class="ph">
                 <div class="ph-t">⚡ Quick Actions</div>
               </div>
               <div style="padding:10px 12px">
-                <div class="qa-bg">
+                <div style="background:#fff;border-radius:13px;padding:11px;display:flex;flex-direction:column;gap:6px;">
 
-                  <a href="${pageContext.request.contextPath}/patients?action=add" class="qa-card">
-                    <div class="qa-ico">➕</div>
-                    <span class="qa-lbl">Register New Patient</span>
-                    <span class="qa-arr">›</span>
+                  <a href="${pageContext.request.contextPath}/patients?action=add" style="display:flex;align-items:center;gap:11px;padding:10px 13px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:11px;cursor:pointer;transition:all 0.18s;text-decoration:none;">
+                    <div style="width:32px;height:32px;border-radius:9px;background:#dcfce7;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;">➕</div>
+                    <span style="flex:1;font-size:12px;font-weight:600;color:#064e3b;">Register New Patient</span>
+                    <span style="font-size:17px;color:#059669;">›</span>
                   </a>
 
-                  <a href="${pageContext.request.contextPath}/surgeries?action=schedule" class="qa-card">
-                    <div class="qa-ico">📅</div>
-                    <span class="qa-lbl">Schedule Surgery</span>
-                    <span class="qa-arr">›</span>
+                  <a href="${pageContext.request.contextPath}/surgeries?action=schedule" style="display:flex;align-items:center;gap:11px;padding:10px 13px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:11px;cursor:pointer;transition:all 0.18s;text-decoration:none;">
+                    <div style="width:32px;height:32px;border-radius:9px;background:#dbeafe;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;">📅</div>
+                    <span style="flex:1;font-size:12px;font-weight:600;color:#1e3a5f;">Schedule Surgery</span>
+                    <span style="font-size:17px;color:#2563eb;">›</span>
                   </a>
 
-                  <a href="${pageContext.request.contextPath}/patients" class="qa-card">
-                    <div class="qa-ico">📊</div>
-                    <span class="qa-lbl">Patient Risk Reports</span>
-                    <span class="qa-arr">›</span>
+                  <a href="${pageContext.request.contextPath}/patients" style="display:flex;align-items:center;gap:11px;padding:10px 13px;background:#fffbeb;border:1px solid #fde68a;border-radius:11px;cursor:pointer;transition:all 0.18s;text-decoration:none;">
+                    <div style="width:32px;height:32px;border-radius:9px;background:#fef3c7;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;">📊</div>
+                    <span style="flex:1;font-size:12px;font-weight:600;color:#713f12;">Patient Risk Reports</span>
+                    <span style="font-size:17px;color:#d97706;">›</span>
                   </a>
 
-                  <a href="${pageContext.request.contextPath}/ot" class="qa-card">
-                    <div class="qa-ico">🏨</div>
-                    <span class="qa-lbl">Check OT Availability</span>
-                    <span class="qa-arr">›</span>
+                  <a href="${pageContext.request.contextPath}/ot" style="display:flex;align-items:center;gap:11px;padding:10px 13px;background:#fff5f5;border:1px solid #fecaca;border-radius:11px;cursor:pointer;transition:all 0.18s;text-decoration:none;">
+                    <div style="width:32px;height:32px;border-radius:9px;background:#fee2e2;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;">🏨</div>
+                    <span style="flex:1;font-size:12px;font-weight:600;color:#7f1d1d;">Check OT Availability</span>
+                    <span style="font-size:17px;color:#dc2626;">›</span>
                   </a>
 
-                  <a href="${pageContext.request.contextPath}/surgeons" class="qa-card">
-                    <div class="qa-ico">👨‍⚕️</div>
-                    <span class="qa-lbl">Surgeon Availability</span>
-                    <span class="qa-arr">›</span>
+                  <a href="${pageContext.request.contextPath}/surgeons" style="display:flex;align-items:center;gap:11px;padding:10px 13px;background:#f5f3ff;border:1px solid #ddd6fe;border-radius:11px;cursor:pointer;transition:all 0.18s;text-decoration:none;">
+                    <div style="width:32px;height:32px;border-radius:9px;background:#ede9fe;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;">👨‍⚕️</div>
+                    <span style="flex:1;font-size:12px;font-weight:600;color:#3b0764;">Surgeon Availability</span>
+                    <span style="font-size:17px;color:#7c3aed;">›</span>
                   </a>
 
                 </div>

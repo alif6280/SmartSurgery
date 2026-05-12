@@ -229,7 +229,7 @@ body::after{content:'';position:fixed;bottom:-80px;right:-80px;width:300px;heigh
       </div>
       <div>
         <div class="brand-name">Smart Surgery System</div>
-        <div class="brand-sub">KYAMCH · Hospital Management</div>
+        <div class="brand-sub">KYAMCH · Surgery Management</div>
       </div>
     </div>
 
@@ -264,7 +264,7 @@ body::after{content:'';position:fixed;bottom:-80px;right:-80px;width:300px;heigh
         SSL Encrypted
       </span>
     </div>
-    <div class="htitle">Welcome back,<br>Doctor.</div>
+    <div class="htitle">Ready for,<br>Today’s Operations?</div>
     <div class="hsub">Sign in to your surgical management dashboard.</div>
 
     <%-- Alerts --%>

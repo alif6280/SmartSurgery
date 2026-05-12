@@ -1,12 +1,16 @@
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\dao\OperationTheaterDAO.java
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\dao\PatientDAO.java
+D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\dao\SettingsDAO.java
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\dao\SurgeonDAO.java
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\dao\SurgeryDAO.java
+D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\dao\UserDAO.java
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\model\OperationTheater.java
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\model\Patient.java
+D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\model\Settings.java
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\model\Surgeon.java
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\model\Surgery.java
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\model\User.java
+D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\servlet\AboutServlet.java
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\servlet\ConflictCheckServlet.java
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\servlet\DashboardServlet.java
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\servlet\LoginServlet.java
@@ -14,6 +18,7 @@ D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\servlet\LogoutServle
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\servlet\OTServlet.java
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\servlet\PatientReportServlet.java
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\servlet\PatientServlet.java
+D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\servlet\SettingsServlet.java
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\servlet\SurgeonAvailabilityServlet.java
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\servlet\SurgeonServlet.java
 D:\java\SmartSurgery\SmartSurgery\src\main\java\com\surgery\servlet\SurgeryServlet.java
